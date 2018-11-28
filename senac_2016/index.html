@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/clipboard.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
 </head>
 
@@ -113,22 +114,22 @@
                     </form>
                 </div>
 
-                <div class="col-md-5 offset-md-1" id="mostrar">
+                <div class="col-md-5 offset-md-1">
                     <div class="row">
-                        <div class="col-md-12">
-                            <table >
+                        <div class="col-md-12" id="content" >
+                            <table>
                                 <h3>SOLICITAÇÃO PARA ABERTURA DE DIÁRIO</h3>                        
                                 <tr>
                                     <th>Curso:</th>
                                     <td id="m_curso"></td>
                                 </tr>
                                 <tr>
-                                    <th>Oferta:</th>
-                                    <td id="m_oferta"></td>                                    
+                                    <th>Descrição da uc:</th>
+                                    <td id="m_descricao"></td>                         
                                 </tr>
                                 <tr>
-                                    <th>Descrição da uc:</th>
-                                    <td id="m_descricao"></td>
+                                    <th>Oferta:</th>
+                                    <td id="m_oferta"></td>  
                                 </tr>
                                 <tr> 
                                     <th>Número da aula:</th>
@@ -143,21 +144,17 @@
                                     <td id="m_data_termino"></td>
                                 </tr>
                                 <tr>
-                                    <th>Docente Principal:</th>
-                                    <td id="m_nome_docente"></td>
-                                </tr>
-                                <tr>
                                     <th>Id do Docente Principal:</th>
                                     <td id="m_id_docente"></td>
                                 </tr>
+                                <tr>
+                                    <th>Docente Principal:</th>
+                                    <td id="m_nome_docente"></td>
+                                </tr>
                                 
-                                <tr>                                    
-                                    <th>
-                                        Motivo:                                        
-                                    </th>
-                                    <td>
-                                        <p id="m_motivo"></p>
-                                    </td>
+                                <tr>                                        
+                                    <th>Motivo:</th>
+                                    <td id="m_motivo"></td>
                                 </tr>
                                 <tr>
                                     <th>Justificativa:</th>
@@ -165,9 +162,7 @@
                                 </tr>
                                 <tr>
                                     <th>Parte do diário que precisa ser aberta</th>
-                                    <td>
-                                        <p id="m_parte"></p>
-                                    </td>
+                                    <td id="m_parte"></td>
                                 </tr>
                             </table>
                         </div>
@@ -175,7 +170,7 @@
                 </div>
 
                 
-                <button class="btn btn-info" onclick="copiar()">Copiar</button>
+                <button class="btn btn-info" data-clipboard-target="#content" onclick="clipboard()">Copiar</button>
  
             </div>
         </div>
