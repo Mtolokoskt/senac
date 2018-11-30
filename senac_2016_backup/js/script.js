@@ -25,6 +25,8 @@ function monstrar() {
     document.getElementById("m_nome_docente").innerHTML = nome_docente;
     document.getElementById("m_justificativa").innerHTML = justificativa;
 
+    
+
 };
 
 function mostrar_radio() {

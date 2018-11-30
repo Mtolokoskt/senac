@@ -1,0 +1,20 @@
+table, tr, th, td {
+    border: 2px solid black;
+    padding: 3%;
+    
+}
+th{
+    width: 40%;
+}
+td{
+    width: 100%;
+    max-width: 100%;
+    overflow-wrap: break-word;
+}
+h1, h3{
+    text-align: center;
+}
+.btn{
+    margin-left: 50%;
+};
+

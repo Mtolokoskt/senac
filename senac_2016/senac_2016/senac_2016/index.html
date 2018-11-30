@@ -1,0 +1,180 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> Criação de Formulario</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/clipboard.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1> Senac - Araraquara</h1>        
+    </header>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 offset-md-1">
+                    <form class="form-group">
+                        <h3>SOLICITAÇÃO PARA ABERTURA DE DIÁRIO</h3>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <label>Curso</label>
+                                <input type="text" class="form-control" id="curso" maxlength="150" onkeyup="monstrar()">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <label>Descrição da UC</label>
+                                <input type="text" class="form-control" id="descricao" maxlength="150" onkeyup="monstrar()">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Oferta</label>
+                                <input type="number" class="form-control" id="oferta" maxlength="50" onkeyup="monstrar()">
+                            </div>
+
+                            <div class="col-md-6">
+                                <label>Número Da Aula</label>
+                                <input type="number" class="form-control" id="numero_aula" maxlength="50" onkeyup="monstrar()">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Data de Início</label>
+                                <input type="date" class="form-control" id="data_inicio" onkeyup="monstrar()" onchange="monstrar()">
+                            </div>
+
+                            <div class="col-md-6">
+                                <label>Data de Término</label>
+                                <input type="date" class="form-control"  id="data_termino" onkeyup="monstrar()" onchange="monstrar()">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <label>ID Docente Principal</label>
+                                <input type="text" class="form-control" id="id_docente" maxlength="50" onkeyup="monstrar()">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <label>Docente Principal</label>
+                                <input type="text" class="form-control" id="nome_docente" maxlength="80" onkeyup="monstrar()">
+                            </div>
+                        </div>
+
+                        <h2>Motivo</h2>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="radio">
+                                    <label><input type="radio" id="mot1" value="Vencimento de prazo para encerramento" name="radio_mot" onclick="mostrar_motivo()">Vencimento de prazo para encerramento</label>
+                                </div>
+
+                                <div class="radio">
+                                    <label><input type="radio" id="mot2" value="Diário
+                                        encerrado, realizar correção" name="radio_mot" onclick="mostrar_motivo()">Diário
+                                        encerrado, realizar correção</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <label>Justificativa (200 caracteres):</label>
+                                <textarea type=text class="form-control" id="justificativa" maxlength="200" rows="3" onkeyup="monstrar()"></textarea>
+                                <div>
+                                    <h2>Parte do diário que precisa ser aberta</h2>
+                                    <div class="radio">
+                                        <label><input type="radio" id="parte1" value="Presença" name="radio_parte" onclick="mostrar_parte()">Presença</label>
+                                    </div>
+                                    <div class="radio">
+                                        <label><input type="radio" id="parte2" value="Menções/Notas" name="radio_parte" onclick="mostrar_parte()">Menções/Notas</label>
+                                    </div>
+                                    <div class="radio">
+                                        <label><input type="radio" id="parte3" value="Avaliação do Processo" name="radio_parte" onclick="mostrar_parte()">Avaliação do Processo</label>
+                                    </div>
+                                    <div class="radio">
+                                        <label><input type="radio" id="parte4" value="Completo" name="radio_parte" onclick="mostrar_parte()">Completo</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>  
+                </div>
+
+                <div class="col-md-5 offset-md-1">
+                    <div class="row">
+                        <div class="col-md-12" id="content" >
+                            <table>
+                                <h3>SOLICITAÇÃO PARA ABERTURA DE DIÁRIO</h3>                        
+                                <tr>
+                                    <th>Curso:</th>
+                                    <td id="m_curso"></td>
+                                </tr>
+                                <tr>
+                                    <th>Descrição da uc:</th>
+                                    <td id="m_descricao"></td>                         
+                                </tr>
+                                <tr>
+                                    <th>Oferta:</th>
+                                    <td id="m_oferta"></td>  
+                                </tr>
+                                <tr> 
+                                    <th>Número da aula:</th>
+                                    <td id="m_numero_aula"></td>
+                                </tr> 
+                                <tr>
+                                    <th>Data de Início:</th>
+                                    <td id="m_data_inicio"></td>
+                                </tr>
+                                <tr>
+                                    <th>Data de Término:</th>
+                                    <td id="m_data_termino"></td>
+                                </tr>
+                                <tr>
+                                    <th>Id do Docente Principal:</th>
+                                    <td id="m_id_docente"></td>
+                                </tr>
+                                <tr>
+                                    <th>Docente Principal:</th>
+                                    <td id="m_nome_docente"></td>
+                                </tr>
+                                
+                                <tr>                                        
+                                    <th>Motivo:</th>
+                                    <td id="m_motivo"></td>
+                                </tr>
+                                <tr>
+                                    <th>Justificativa:</th>
+                                    <td id="m_justificativa"></td>
+                                </tr>
+                                <tr>
+                                    <th>Parte do diário que precisa ser aberta</th>
+                                    <td id="m_parte"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>      
+                </div>
+
+                <button id="copiar" class="btn btn-info" data-clipboard-target="#content" onclick="clipboard()">Copiar</button> 
+                <button id="limpar" class="btn btn-info" onclick="history.go(0)">Limpar</button>
+                                        
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

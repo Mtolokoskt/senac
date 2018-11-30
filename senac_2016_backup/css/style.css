@@ -1,16 +1,19 @@
 table, tr, th, td {
     border: 2px solid black;
     padding: 3%;
+    
 }
 th{
     width: 40%;
 }
 td{
     width: 60%;
+    
 }
-h1{
+h1, h3{
     text-align: center;
 }
 .btn{
     margin-left: 50%;
 };
+
