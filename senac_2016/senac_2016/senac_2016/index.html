@@ -42,12 +42,12 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <label>Oferta</label>
-                                <input type="number" class="form-control" id="oferta" maxlength="50" onkeyup="monstrar()">
+                                <input type="number" class="form-control" id="oferta" size="30" onkeyup="monstrar()">
                             </div>
 
                             <div class="col-md-6">
                                 <label>Número Da Aula</label>
-                                <input type="number" class="form-control" id="numero_aula" maxlength="50" onkeyup="monstrar()">
+                                <input type="number" class="form-control" id="numero_aula" min"1" max"50"onkeyup="monstrar()">
                             </div>
                         </div>
 
@@ -175,10 +175,16 @@
                     <button id="limpar" class="btn btn-info" onclick="history.go(0)">Limpar</button>
                 </div>                                        
             </div>
-        </div>       
-    
+        </div> 
     </section>
-    
+    <footer>
+        <div class="container-fluid">
+                <div class="row justify-content-lg-center rodape">
+                        <p></p>
+                </div>
+        </div>
+        
+    </footer>
 </body>
 
 </html>

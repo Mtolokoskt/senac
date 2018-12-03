@@ -18,8 +18,9 @@ function monstrar() {
     
     var d_inicio = new Date(data_inicio+'T00:00:00-03:00');
 
+    console.log(d_inicio);
     var d_inicio_dia = d_inicio.getDate();
-    var d_inicio_mes = d_inicio.getMonth();
+    var d_inicio_mes = d_inicio.getMonth()+1;
     var d_inicio_ano = d_inicio.getFullYear();
 
     var data_inicio = (d_inicio_dia || 00) + '/' + (d_inicio_mes || 00) + '/' + (d_inicio_ano || 0000);
@@ -27,7 +28,7 @@ function monstrar() {
     var d_termino = new Date(data_termino+'T00:00:00-03:00');
 
     var d_termino_dia = d_termino.getDate();
-    var d_termino_mes = d_termino.getMonth();
+    var d_termino_mes = d_termino.getMonth()+1;
     var d_termino_ano = d_termino.getFullYear();
 
     var data_termino = (d_termino_dia|| 00) + '/' + (d_termino_mes || 0) + '/' + (d_termino_ano || 0000);

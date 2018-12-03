@@ -11,10 +11,8 @@ td{
     max-width: 100%;
     overflow-wrap: break-word;
 }
-h1, h3{
-    text-align: center;
-}
 h1{
+    text-align: center;
     border-top: 4px solid #004587;
     background-color: #f7f7f7;
     /*border-bottom: 1px solid #e0e0e0;*/
@@ -22,24 +20,17 @@ h1{
     height: 60px;
     position: relative;
     z-index: 2;
-}
+} 
 .botao{
-    margin-left: 50%;
+    margin-left: 45%;
     display: inline;
-};
+}
 .rodape{    
     border-top: 50px solid #f7941d;
-
     background-color: #004587;
     padding: 30px 0;
     color: #fff;
     font-family: Sanchez;
     clear: both !important;
-    
-    
-};
-.rodape {
-    height: 50%;
-    background: red;
-    }
+}
 
