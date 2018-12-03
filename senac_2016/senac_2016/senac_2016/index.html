@@ -14,9 +14,11 @@
 
 <body>
     <header>
-        <h1> Senac - Araraquara</h1>        
+        <div class="linha-senac">
+            <h1> Senac - Araraquara</h1>
+        </div>       
     </header>
-
+    
     <section>
         <div class="container">
             <div class="row">
@@ -168,13 +170,15 @@
                         </div>
                     </div>      
                 </div>
-
-                <button id="copiar" class="btn btn-info" data-clipboard-target="#content" onclick="clipboard()">Copiar</button> 
-                <button id="limpar" class="btn btn-info" onclick="history.go(0)">Limpar</button>
-                                        
+                <div class="botao">
+                    <button id="copiar" class="btn btn-info" data-clipboard-target="#content" onclick="clipboard()">Copiar</button> 
+                    <button id="limpar" class="btn btn-info" onclick="history.go(0)">Limpar</button>
+                </div>                                        
             </div>
-        </div>
+        </div>       
+    
     </section>
+    
 </body>
 
 </html>
