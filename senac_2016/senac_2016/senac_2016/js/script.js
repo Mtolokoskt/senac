@@ -1,8 +1,6 @@
-
 $( document ).ready(function() {
     new ClipboardJS('.btn');
 });
-
 
 function monstrar() {
 

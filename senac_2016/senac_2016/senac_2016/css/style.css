@@ -1,7 +1,9 @@
+.container{
+    padding-top: 50px;
+}
 tr, th, td {
     border: 2px solid black;
-    padding: 3%;
-    
+    padding: 3%;  
 }
 th{
     width: 40%;
@@ -15,15 +17,16 @@ h1{
     text-align: center;
     border-top: 4px solid #004587;
     background-color: #f7f7f7;
-    /*border-bottom: 1px solid #e0e0e0;*/
     border-bottom: 2px solid #f7941d;
     height: 60px;
     position: relative;
     z-index: 2;
 } 
 .botao{
-    margin-left: 45%;
+    margin-left: 40%;
     display: inline;
+    padding-bottom: 20px;
+    letter-spacing: 80px;
 }
 .rodape{    
     border-top: 50px solid #f7941d;
@@ -34,3 +37,8 @@ h1{
     clear: both !important;
 }
 
+.btn .btn-info{
+    background: #888888;
+    background-color: #888888;
+    border-color: #888888;
+}
